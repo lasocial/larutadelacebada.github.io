@@ -35,6 +35,8 @@ plugins:
   - jekyll-feed
   - jemoji
 
+# Include custom paths
+include: ["_pages"]
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -54,4 +56,11 @@ defaults:
     values:
       layout: post
       read_time: true
+      image: /assets/images/intro1.jpg
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: page
+      read_time: false
       image: /assets/images/intro1.jpg
