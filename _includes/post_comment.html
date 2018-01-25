@@ -31,16 +31,25 @@
     justify-content: center;
     margin: 0 auto;
   }
+
+  .g-recaptcha {
+    margin-bottom: 10pt;
+  }
 </style>
 
 <form id="staticman-form" class="layout--page entry-content" method="POST" action="https://api.staticman.net/v2/entry/lasocial/larutadelacebada.github.io/master/comments">
   <input name="options[redirect]" type="hidden" value="{{ site.url }} {{ page.url }}">
+  <input type="hidden" name="options[reCaptcha][siteKey]" value="6Ld8VEIUAAAAADgOFfCfJHqKhiMFXXZ6hsJpN_OG">
+  <input type="hidden" name="options[reCaptcha][secret]" value="ZiH6HEpHZVWUi0VkJ/wWgR6pcM0UCHgoWPcM1tbj22tMwGSsgl7mKS6VWI0JTcNa8lb4Vu03l6wyqGjyTXTeOASq/tzxFdnTtC7cIcl2zwDveDEVHbi1uHQi/JRPhfjsGifxQKAwPSAPYX1j/9IkmoA9too1+q6L1/PqECp29sE=">
   <!-- e.g. "2016-01-02-this-is-a-post" -->
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
   <label>Name* <input name="fields[name]" type="text"></label>
   <label>E-mail* <input name="fields[email]" type="email"></label>
   <label>Twitter <input name="fields[twitter]" type="text"></label>
   <label>Message* <textarea name="fields[message]" ></textarea></label>
+
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <div class="g-recaptcha" data-sitekey="6Ld8VEIUAAAAADgOFfCfJHqKhiMFXXZ6hsJpN_OG"></div>
 
   <button type="submit">Go!</button>
 </form>
