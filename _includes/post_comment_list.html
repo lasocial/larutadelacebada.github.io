@@ -1,0 +1,29 @@
+<section class="comments">
+	<div class="constrain--body">
+		<div class="comments__existing js-comments" {% if site.data.comments[page.slug] == null %}aria-hidden="true"{% endif %}>
+			<h2 class="comments__heading heading-2">Comments</h2>
+      <p id="comment-pending-message" style="display: flex; justify-content: center; display: none;">
+      <strong style="color: #b60205;">Comentario enviado con &eacute;xito. En espera de moderaci&oacute;n.</strong>
+      </p>
+
+      <script>
+        if(window.location.href.indexOf('comment=pending') > -1) {
+          document.getElementById('comment-pending-message').style = 'display: flex; justify-content: center;';
+        }
+      </script>
+
+			{% if site.data.comments[page.slug] %}
+				{% assign comments = site.data.comments[page.slug] | sort %}
+
+				{% for comment in comments %}
+					{% assign email = comment[1].email %}
+					{% assign name = comment[1].name %}
+					{% assign twitter = comment[1].twitter %}
+					{% assign date = comment[1].date %}
+					{% assign message = comment[1].message %}
+          {% include comment_body.html index=forloop.index email=email twitter=twitter name=name date=date message=message %}
+				{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+</section>

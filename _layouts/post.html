@@ -11,7 +11,8 @@ layout: default
         {{ content }}
       </div>
       {% if site.staticman %}
-        {% include post_comment.html %}
+        {% include post_comment_list.html %}
+        {% include post_new_comment.html %}
       {% endif %}
     </article>
 

@@ -1,0 +1,74 @@
+<style>
+  .js-comment {
+    margin-bottom: 1em;
+    margin-left: 10pt;
+    background-color: ghostwhite;
+    width: 85%;
+    padding: 1.5em 1.5em;
+  }
+
+  .comment__body {
+    border: 1px solid #222;
+    width: 80%;
+    display: flex;
+    justify-content: left;
+    padding-top: 5pt;
+    padding-left: 5pt;
+    background-color: white;
+    margin-left: 6.5em;
+    margin-top: -2em;
+    word-wrap: break-word;
+  }
+
+  .comment__avatar {
+    margin-bottom: 10pt;
+  }
+
+  .comment__date {
+    font-size: 10pt;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 5pt;
+    padding-bottom: 10pt;
+  }
+
+  .comment__avatar-wrapper {
+    display: flex;
+  }
+
+  .comment__author {
+    left: 0;
+    margin-left: 1em;
+    font-size: 16pt;
+    padding-top: 10pt;
+  }
+
+  .comment__author > a {
+    color: black;
+  }
+</style>
+
+<article id="comment{{ include.index }}" class="js-comment comment">
+	<div class="comment__avatar-wrapper">
+		<img class="comment__avatar" src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=100">
+		<h3 class="comment__author">
+			{% if (include.twitter) and (include.twitter != '@twitter') %}
+				<a rel="nofollow" target="_blank" href="https://twitter.com/{{ include.twitter }}">{{ include.name }}</a>
+			{% else %}
+				{{ include.name }}
+			{% endif %}
+      <small class="comment__date">
+        {% if include.date %}
+        {% if include.index %}<a href="#comment{{ include.index }}">{% endif %}
+          {{ include.date | date: "%-d %B %Y" }}
+          {% if include.index %}</a>{% endif %}
+        {% endif %}
+      </small>
+		</h3>
+	</div>
+	<div class="comment__content-wrapper">
+		<div class="comment__body">
+			{{ include.message | markdownify }}
+		</div>
+	</div>
+</article>
