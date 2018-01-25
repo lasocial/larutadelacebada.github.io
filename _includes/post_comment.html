@@ -1,0 +1,46 @@
+<style>
+  #staticman-form {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #staticman-form label input, textarea {
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 10pt;
+  }
+
+  #staticman-form input[type=text], input[type=email] {
+    height: 2.5em;
+    border: 1px solid #222;
+    background: #fff;
+  }
+
+  #staticman-form textarea {
+    height: 6em;
+    border: 1px solid #222;
+    background: #fff;
+  }
+
+  #staticman-form button {
+    background: #fff;
+    height: 2em;
+    width: 50%;
+    border: 1px solid #222;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+</style>
+
+<form id="staticman-form" class="layout--page entry-content" method="POST" action="https://api.staticman.net/v2/entry/lasocial/larutadelacebada.github.io/master/comments">
+  <input name="options[redirect]" type="hidden" value="{{ site.url }} {{ page.url }}">
+  <!-- e.g. "2016-01-02-this-is-a-post" -->
+  <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+  <label>Name* <input name="fields[name]" type="text"></label>
+  <label>E-mail* <input name="fields[email]" type="email"></label>
+  <label>Twitter <input name="fields[twitter]" type="text"></label>
+  <label>Message* <textarea name="fields[message]" ></textarea></label>
+
+  <button type="submit">Go!</button>
+</form>

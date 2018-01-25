@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+{% include page-intro.html %}
+
+<main id="main" class="page-content" aria-label="Content">
+  <div class="inner">
+    <article class="entry-wrap">
+      <div class="entry-content">
+        {{ content }}
+      </div>
+      {% if site.staticman %}
+        {% include post_comment.html %}
+      {% endif %}
+    </article>
+
+    {% include footer.html %}
+  </div>
+</main>
+

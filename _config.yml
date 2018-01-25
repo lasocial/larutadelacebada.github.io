@@ -37,6 +37,10 @@ plugins:
 
 # Include custom paths
 include: ["_pages"]
+
+# Is staticman present
+staticman: true
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
