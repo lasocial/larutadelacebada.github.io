@@ -25,6 +25,13 @@ logo: '/assets/images/logo.png'
 twitter_username: estebanz01
 github_username:  estebanz01
 
+# Social - for "SEO"
+social:
+  name: Esteban Zapata
+  links:
+    - https://twitter.com/estebanz01
+    - https://github.com/estebanz01
+
 # Pagination
 paginate: 5
 paginate_path: /page:num/
@@ -33,6 +40,7 @@ paginate_path: /page:num/
 markdown: kramdown
 theme: minima
 plugins:
+  - jekyll-seo-tag
   - jekyll-feed
   - jemoji
 
