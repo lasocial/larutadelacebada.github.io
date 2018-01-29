@@ -25,6 +25,9 @@ logo: '/assets/images/logo.png'
 twitter_username: estebanz01
 github_username:  estebanz01
 
+# Google Analytics - REMOVE THIS WHEN WE HAVE AN ALTERNATIVE ASAP.
+google_analytics: "UA-113311952-1"
+
 # Pagination
 paginate: 5
 paginate_path: /page:num/
@@ -33,6 +36,7 @@ paginate_path: /page:num/
 markdown: kramdown
 theme: minima
 plugins:
+  - jekyll-seo-tag
   - jekyll-feed
   - jemoji
 
