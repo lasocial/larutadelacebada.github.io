@@ -32,6 +32,9 @@ social:
     - https://twitter.com/estebanz01
     - https://github.com/estebanz01
 
+twitter:
+  username: estebanz01
+
 # Pagination
 paginate: 5
 paginate_path: /page:num/
