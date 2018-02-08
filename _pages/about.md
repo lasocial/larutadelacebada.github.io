@@ -28,3 +28,6 @@ Este es un proyecto de amigos para amigos. Nuestros contenidos son elaborados co
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/bitcoin.png" alt="BitcoinCash Address">
     <figcaption><strong>Bitcoin (BTC)</strong> 3BQ7F4cWpgKqjT8kL8oYsUCpUWch33g7CB</figcaption>
 </figure>
+
+<hr />
+<small>Todas las imágenes utilizadas que no son elaboración propia de los autores del sitio, poseen licencia Creative Commons CC0. Algunas imágenes también son autoría de los autores del blog y al ser utilizadas en el sitio, están cediendo derechos únicamente a La Ruta de La Cebada. Algunas imágenes han sido extraídas, de forma legal y legítima, a tráves del sitio web https://pixabay.com/ </small>
