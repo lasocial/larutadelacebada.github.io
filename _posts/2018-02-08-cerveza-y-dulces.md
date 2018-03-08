@@ -1,8 +1,11 @@
 ---
 layout: post
 title:  "Cerveza y Dulces"
-date:   2018-02-08 09:00:00 -0500
+description: "A veces las combinaciones extrañas llevan a experiencias únicas"
+date: 2018-02-08 09:00:00 -0500
 categories: blog
+lang: es
+image: '/assets/images/posts/2018-02-08-cerveza-y-dulces/portada.jpg'
 author: estebanz01
 ---
 ![Postre](/assets/images/posts/2018-02-08-cerveza-y-dulces/portada.jpg){: .align-center}

@@ -1,8 +1,11 @@
 ---
 layout: post
 title:  "La cerveza sin alcohol también es cerveza"
+description: "A veces hay que aprender a querer las cervezas sin alcohol"
 date:   2018-03-08 00:00:00 -0500
 categories: blog
+lang: es
+image: '/assets/images/posts/2018-03-08-cerveza-sin-alcohol/intro.jpg'
 author: estebanz01
 ---
 ![Nevera de cervezas](/assets/images/posts/2018-03-08-cerveza-sin-alcohol/intro.jpg){: align-left}

@@ -1,8 +1,11 @@
 ---
 layout: post
 title:  "¡Y comenzamos!"
+description: "Acompáñanos en este nuevo viaje de cerveza"
 date:   2018-01-24 16:39:12 -0500
 categories: blog
+lang: es
+image: '/assets/images/posts/2018-01-24-bienvenida.jpg'
 author: estebanz01
 ---
 ![left-intro](/assets/images/posts/2018-01-24-bienvenida.jpg){: .align-left}

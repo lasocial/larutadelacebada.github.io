@@ -1,8 +1,11 @@
 ---
 layout: post
 title:  "Viviendo la cerveza artesanal de Medellín"
+description: "Nuestra genial experiencia en mercados del río combinado con la cerveza artesanal"
 date:   2018-01-28 17:00:00 -0500
 categories: blog
+lang: es
+image: '/assets/images/posts/2018-01-28-festival-cerveza.jpg'
 author: estebanz01
 ---
 ![El balcón de mi casa. Esteban Zapata](/assets/images/posts/2018-01-28-festival-cerveza.jpg){: align-left}
