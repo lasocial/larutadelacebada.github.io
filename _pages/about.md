@@ -30,7 +30,10 @@ Intentamos lo posible por divulgar lo poco que sabemos, promoviendo alternativas
 
   setInterval(slider, 5000);
 </script>
-
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick/slick/slick-theme.css"/>
 <style>
   body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -46,12 +49,12 @@ Intentamos lo posible por divulgar lo poco que sabemos, promoviendo alternativas
       height: 100%; /* Full height */
       overflow: auto; /* Enable scroll if needed */
       background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
   }
 
   /* Modal Content */
   .modal-content {
-      background-color: #fefefe;
+      background-color: #f4f4f4;
       margin: auto;
       padding: 20px;
       border: 1px solid #888;
@@ -79,7 +82,17 @@ Intentamos lo posible por divulgar lo poco que sabemos, promoviendo alternativas
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Gracias por visitarnos ! Recuerda que nos puedes apoyar a trav&eacute;s de una donaci&oacute;n</p>
+    <h2>Gracias por visitarnos!</h2>
+    <p>Recuerda que nos puedes apoyar a trav&eacute;s de una donaci&oacute;n.</p>
+    <br />
+    <p>Mientras tanto, disfruta de nuestra galer&iacute;a de cervezas</p>
+    <br />
+    <div style='width: 80%;' class='slider-primary' data-slick="{ 'mobileFirst': true, 'slidesToShow': 1, 'slidesToScroll': 4 }">
+      <div><img src='../assets/images/posts/2018-01-24-bienvenida.jpg' /></div>
+      <div><img src='../assets/images/posts/2018-01-28-festival-cerveza.jpg' /></div>
+      <div><img src='../assets/images/posts/2018-07-05-final-mundial-cerveza.jpg' /></div>
+      <div><img src='../assets/images/posts/2018-03-08-cerveza-sin-alcohol/intro.jpg' /></div>
+    </div>
   </div>
 
 </div>
@@ -108,7 +121,14 @@ Intentamos lo posible por divulgar lo poco que sabemos, promoviendo alternativas
     modal.style.display = "block";
   }, 500);
 </script>
-
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+      crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick/slick/slick.min.js"></script>
+<script>
+  $('.slider-primary').slick();
+</script>
 Este es un proyecto de amigos para amigos. Nuestros contenidos son elaborados con amor y pensamiento voluntario, pero si quieres, puedes aportar una donación en criptomonedas, el monto que quieras:
 
 <figure style="width: 150px; margin-left: 3em;" class="align-center">
