@@ -7,6 +7,7 @@ self.addEventListener('install', (evt) => {
   console.log('The Bartender is trying to serve you!');
 });
 
+
 self.addEventListener('push', (event) => {
   console.log('A new notification has been received');
 

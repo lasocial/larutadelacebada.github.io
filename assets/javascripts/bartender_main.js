@@ -60,9 +60,6 @@ function ajax(method, url, data) {
   });
 }
 
-const VAPID_PUBLIC_KEY = 'BNuuYA7LQ9qjrs1leWDGSg2YTXGaKqkMaQ4GXfQ0vAwEfxagOwfHXlPka8wqwnRdSsS35IfqJA9xsQj9JObSy9E=';
-const VAPID_PRIVATE_KEY = 'gQIdJKiZOTZmNF8OVKSStSKJUJ7lznR_GX8MYBCxUYg=';
-
 function validateSubscription() {
   let subscribeBtn = document.querySelector('.subscribe');
   let unSubscribeBtn = document.querySelector('.unsubscribe');
@@ -89,18 +86,25 @@ function validateSubscription() {
 function subscribeMe() {
   navigator.serviceWorker.ready.then((registration) => {
     // Get VAPI public key.
-    ajax('GET', '/assets/push_public_key.txt')
+    ajax('GET', 'https://lossless-ezapata.dev.vhlcentral.com/pubkey')
       .then((key) => {
         let public_key = key.replace(/\r?\n|\r/g, ''); // Clean result from any new line.
 
         registration.pushManager.subscribe({
           userVisibleOnly: true,
-          applicationServerKey: urlBase64ToUint8Array(public_key.replace(/\r?\n|\r/g, ''))
+          applicationServerKey: urlBase64ToUint8Array(public_key)
         }).then((subscription) => {
           console.log('Subscription successful', subscription);
-          ajax('POST', 'http://localhost:4567/pushme', subscription);
-          validateSubscription();
-        }).catch((error) => console.log('Error trying to subscribe user', error));
+          ajax('POST', 'https://lossless-ezapata.dev.vhlcentral.com/subscribe', subscription)
+          .then(() => validateSubscription())
+          .catch((error) => {
+            console.log('Cannot execute ajax subscribe. Try again', error);
+            validateSubscription();
+          });
+        }).catch((error) => {
+          console.log('Error trying to subscribe user', error);
+          removeMe();
+        });
       }).catch((e) => console.log('Error inside AJAX request', e));
   }).catch((error) => console.log('Service worker is not ready', error));
 }
@@ -110,10 +114,13 @@ function removeMe() {
     registration.pushManager.getSubscription()
       .then((subscription) => {
         if (subscription) {
-          subscription.unsubscribe().then((success) => {
-            console.log('Subscription removed correctly', success);
-            validateSubscription();
-          }).catch((error) => console.log('Cannot unsubscribe. Try again', error));
+          ajax('POST', 'https://lossless-ezapata.dev.vhlcentral.com/unsubscribe', subscription)
+          .then((success) => {
+            subscription.unsubscribe().then((success) => {
+              console.log('Subscription removed correctly', success);
+              validateSubscription();
+            }).catch((error) => console.log('Cannot unsubscribe. Try again', error));
+          }).catch((error) => console.log('Cannot remove subscription from Server', error));
         } else {
           console.log('User is not subscribed');
         }
