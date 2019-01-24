@@ -11,7 +11,11 @@ Intentamos lo posible por divulgar lo poco que sabemos, promoviendo alternativas
 - [Esteban Zapata](https://www.twitter.com/estebanz01).
 - [Sebastián Grisales](https://www.twitter.com/sebasgrisalesr).
 
-Este es un proyecto de amigos para amigos. Nuestros contenidos son elaborados con amor y pensamiento voluntario, pero si quieres, puedes aportar una donación en criptomonedas, el monto que quieras:
+Este es un proyecto de amigos para amigos. Nuestros contenidos son elaborados con amor y pensamiento voluntario, pero si quieres, puedes aportar una donación vía PayPal:
+
+[PaypalMe - Esteban Zapata](https://paypal.me/estebanz01?locale.x=es_XC).
+
+O también puedes hacerlo en criptomonedas, el monto que quieras:
 
 <figure style="width: 150px; margin-left: 3em;" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/ethereum.png" alt="Ethereum Address">
@@ -20,13 +24,12 @@ Este es un proyecto de amigos para amigos. Nuestros contenidos son elaborados co
 
 <figure style="width: 150px; margin-left: 3em;" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/ethereum.png" alt="BitcoinCash Address">
-    <figcaption><strong>Bitcoin Cash legacy (BCH)</strong> 3GmDp1DgHfW4g3s1a8ueGSBQgBPNsHe3JH</figcaption>
-    <figcaption><strong>Bitcoin Cash (BCH)</strong> bitcoincash:pzj427fuuzllmuy9nejugdlyd0qrtgq7hvxyne4n29</figcaption>
+    <figcaption><strong>BitcoinCash (BCH)</strong><br />37NQUHxj73ta3DLyJnUuFwBeE2SgFS6JhP</figcaption>
 </figure>
 
 <figure style="width: 150px; margin-left: 3em;" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/bitcoin.png" alt="BitcoinCash Address">
-    <figcaption><strong>Bitcoin (BTC)</strong> 3BQ7F4cWpgKqjT8kL8oYsUCpUWch33g7CB</figcaption>
+    <figcaption><strong>Bitcoin (BTC)</strong><br />3EdEDsYRqjEtr6uZj3dC8Umsy4ZopK1yyK</figcaption>
 </figure>
 
 <hr />
